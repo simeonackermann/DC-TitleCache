@@ -1,0 +1,88 @@
+# APACHE JMETER
+####################################
+
+jmeter:
+  build: ./images/jmeter/
+  links:
+     - titlecache
+  # Wait for the Titlecache and run /jemeter/run.sh /path/to/jmeter.jmx file
+  command: dockerize -timeout 10m -wait tcp://titlecache:80 /bin/bash /jmeter/jmeter.sh /jmeter/config/jmeter.jmx
+  environment:
+      # give the caches to test, seperated by space    
+    - CACHES=apc filesystem memcached mongodb redis # filesystem memcached apc mongodb redis
+      # set thew graph uri (see import folder)
+    - GRAPH=http://titlecache/
+  volumes:
+    - ./data/config/:/jmeter/config/
+    - ./data/results/:/jmeter/results/
+
+
+# TITLECACHE
+####################################
+titlecache:
+  build: ./images/titlecache/
+  links:
+     - store
+     - loader
+     - mongodb
+     - redis
+     - memcached
+  ports:
+    - "8080:80"
+  expose:
+    - "80"
+  command: dockerize -timeout 5m -wait tcp://loader:80 -wait tcp://redis:6379 -wait tcp://mongodb:27017 -wait tcp://memcached:11211 /bin/bash /titlecache.sh
+  volumes:
+    - ./data/config/:/var/www/config/
+    - ./data/results/:/var/www/results/
+
+
+# CACHE-Backends Container
+####################################
+redis:
+  image: redis
+  expose:
+    - "6379"
+
+mongodb:
+  image: mongo
+  expose:
+    - "27017"
+
+#elasticsearch:
+#  image: elasticsearch
+#  expose:
+#    - "9200"
+#    - "9300"
+
+memcached:
+  image: memcached
+  expose:
+    - "11211"
+
+# file:
+#   image: debian
+#
+
+# LOADER + STORE
+####################################
+loader:
+  image: aksw/dld-remoteload-virtuoso
+  links:
+    - store
+  expose:
+    - "80"
+  environment:
+    - STORE_1=uri=>http://%%store%%:1111 type=>virtuoso user=>dba pwd=>dba
+  volumes:
+    - ./data/import:/import_store
+
+store:
+  image: aksw/dld-store-virtuoso7
+  expose:
+    - "8890"
+    - "1111"
+  environment:
+    PWDDBA: "dba"
+  volumes:
+    - ./data/import:/import_store

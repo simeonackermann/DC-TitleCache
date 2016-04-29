@@ -1,0 +1,19 @@
+{
+	"license": "GPL3",
+    "authors": [
+        {
+            "name": "Simeon Ackermann",
+            "homepage": "http://asimeon.de",
+            "email": "amseon@web.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "saft/saft": ">=0.1",
+        "saft/saft-skeleton": "0.*",
+        "symfony/yaml": "*",
+        "zendframework/zend-cache": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

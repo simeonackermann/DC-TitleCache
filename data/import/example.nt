@@ -1,0 +1,22 @@
+<http://example.org/1> <http://purl.org/dc/elements/1.1/title> "Mein toller DC title"@de .
+<http://example.org/1> <http://purl.org/dc/elements/1.1/title> "My DC title"@en .
+<http://example.org/1> <http://www.w3.org/2000/01/rdf-schema#label> "Mein toller RDFS title"@de .
+<http://example.org/1> <http://www.w3.org/2000/01/rdf-schema#label> "My RDFS title"@en .
+<http://example.org/2> <http://purl.org/dc/elements/1.1/title> "Titel 2"@de .
+<http://example.org/2> <http://purl.org/dc/elements/1.1/title> "Title 2"@en .
+<http://example.org/2> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS Titel 2"@de .
+<http://example.org/2> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 2"@en .
+<http://example.org/3> <http://purl.org/dc/elements/1.1/title> "Titel 3"@de .
+<http://example.org/3> <http://purl.org/dc/elements/1.1/title> "Title 3"@en .
+<http://example.org/4> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS Titel 4"@de .
+<http://example.org/4> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 4"@en .
+<http://example.org/5> <http://purl.org/dc/elements/1.1/title> "Titel 5"@de .
+<http://example.org/5> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS Titel 5"@de .
+<http://example.org/6> <http://purl.org/dc/elements/1.1/title> "Title 6"@en .
+<http://example.org/6> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 6"@en .
+<http://example.org/7> <http://purl.org/dc/elements/1.1/title> "Title 7"@en .
+<http://example.org/8> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 8"@en .
+<http://example.org/9> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 9 ohne lang" .
+<http://example.org/9> <http://purl.org/dc/elements/1.1/title> "Title 7"@en .
+<http://example.org/10> <http://www.w3.org/2000/01/rdf-schema#label> "RDFS title 10 ohne lang" .
+<http://example.org/11> <http://example.org/foo> <http://example.org/bar> .
