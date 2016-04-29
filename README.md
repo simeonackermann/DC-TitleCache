@@ -13,6 +13,15 @@ Currently JMeter tests two things:
 1. createindex - call the TitleCache with the create action, to create a cache
 2. fetchvalues - fetch titles for uris. 
 
+## Multiple Tests
+
+To automatic run multiple tests, you can use the `test.sh` script. For example, run:
+
+`./test.sh 10`
+
+to start 10 tests. All results will moved to `./data/results/test-[number]`
+
+
 ## Set the tested Cache backends
 
 Edit the environment variable `CACHES` in  `docker-compose.yml` at section jmeter. The following backends are possible:
