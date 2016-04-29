@@ -1,0 +1,29 @@
+caches:
+  filesystem:
+    dir: "/tmp"
+
+  memory:
+    host: "localhost"
+
+  memcached:
+    host: "memcached"
+    port: 11211
+
+  #sqlite:
+  #  path: "/tmp/cache.sq3"
+
+  mongodb:
+    host: "mongodb" # mongo docker-container
+    # port: 27017
+
+  apc:
+    # no config for apc requiered
+    host: "localhost"
+
+  #elasticsearch:
+  #  host: "elasticsearch" # elasticsearch docker-container
+  #  port: 9200
+
+  redis:
+    host: "redis" # redis docker-container
+    port: 6379
