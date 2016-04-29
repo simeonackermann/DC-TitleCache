@@ -45,9 +45,3 @@ The most important columns here are:
 - `elapsed` - Time elapsed for the request in ms
 - `label` - Label for the request (contains the action:createindex/fetchvalues and the size of payload)
 - `success` - If true, the request successed
-
-## TODO
-
-- DBPedia als import Daten (1 Mill Triple) (doku)
-
-- variable payloads
