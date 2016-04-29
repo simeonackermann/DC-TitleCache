@@ -1,4 +1,4 @@
-# Apache JMeter on TitleCache with Docker-Compose
+# Apache JMeter Benchmark on Saft-Property-Helper with Docker-Compose
 
 This Docker composition contains: a Virtuoso store, a Loader to import some RDF data, a TitleCache (based on (based on [Saft](http://safting.github.io/) and [Zend Cache](https://zendframework.github.io/zend-cache/)) with several Cache-Backends (Memcached, MongoDB, APC and Redis) and the Apache JMeter Benchmarking Tool.
 
