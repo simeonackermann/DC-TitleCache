@@ -36,6 +36,10 @@ Edit the environment variable `CACHES` in  `docker-compose.yml` at section jmete
 
 Copy your RDF data (nt, ttl, ...) file to `./data/import/`. By default the Graph-URI get extracted from the filename. If you need a specific Uri, create a file `[filename].[extension].graph` which containg just the graph uri (see example `swdf.nt.graph`).
 
+## Set fetched titles
+
+Edit the payload files in `./data/config/jmeter/` for your requirements. Each line contains an uri to fetch its title.
+
 ## Read the results
 
 See `./data/results/` for the JMeter Benchmark results.
