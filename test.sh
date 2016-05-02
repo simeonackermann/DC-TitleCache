@@ -44,6 +44,7 @@ function main()
 	if [[ -n $1 ]]; then
 		RUN_TIMES=$1
 	fi
+	echo -e "# Number of tests: ${RUN_TIMES} \n"
 
 	# Do some startup checks
 	check
